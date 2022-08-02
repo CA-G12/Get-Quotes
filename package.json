@@ -1,0 +1,23 @@
+{
+  "name": "get-quotes",
+  "version": "1.0.0",
+  "description": "Getting quotes from an anime API and general quotes API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CA-G12/Get-Quotes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CA-G12/Get-Quotes/issues"
+  },
+  "homepage": "https://github.com/CA-G12/Get-Quotes#readme",
+  "devDependencies": {
+    "jest": "^28.1.3"
+  }
+}
