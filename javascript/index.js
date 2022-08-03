@@ -1,6 +1,7 @@
 // ? Getting HTML elements.
 const dropDownMenu = document.getElementById("type");
-
+const searchBtn = document.getElementById("search-btn");
+const searchInput = document.getElementById("search");
 // ? Create handle dom function.
 const handleDOM = (data, quoteKey, authorKey, quotesSection) => {
   // ? Getting the section of all quotes.
@@ -59,5 +60,20 @@ dropDownMenu.addEventListener("change", function () {
     animeFetchAll();
   } else {
     byTagFetchAll();
+  }
+});
+
+searchBtn.addEventListener("click", () => {
+  if (dropDownMenu.value === "tags") {
+    if (searchInput != "")
+      fetch(
+        `https://goquotes-api.herokuapp.com/api/v1/all?type=tag&val=${searchInput.value}`,
+        (data) => {
+        console.log(data)
+          handleDOM(data.quotes, "text", "author", ".container__section-two");
+        }
+      );
+  } else {
+    //fetch anime api
   }
 });
