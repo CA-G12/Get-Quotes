@@ -4,10 +4,57 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/style.css" />
+    <!-- Google fonts: Barlow and Shadows Into Light. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,700;1,800&family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="shortcut icon" href="./assets/Logo.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="./style.css" />
     <title>Get Quotes</title>
   </head>
   <body>
+    <main class="container">
+      <section class="container__section-one">
+        <section class="container__section-one__desc">
+          <h1 class="container__section-one__desc__title">Get Quote</h1>
+          <p class="container__section__desc__text">
+            In this section, we are providing two different APIs to get quote
+            from. The first is an <strong>Anime</strong> API, you can get a
+            number of quotes by searching with a key word related to
+            <strong>Anime</strong> in the search bar below. The second API is
+            called <strong>Go Quotes</strong>. It is an API in which you can
+            search about quotes by their topic, exp: General, and the API will
+            give you a range of quotes about the same topic you search for.
+          </p>
+        </section>
+
+        <form
+          action="#"
+          id="search-form"
+          class="container__section-one__search"
+        >
+          <label for="type">Type of quotes: </label>
+          <select name="type" id="type">
+            <option value="anime" selected>Anime</option>
+            <option value="tags">By tags</option>
+          </select>
+          <input
+            type="text"
+            name="search"
+            id="search"
+            aria-label="search bar"
+            placeholder="Search by keyword  ..."
+          />
+          <button type="button" id="search-btn">Search</button>
+        </form>
+      </section>
+    </main>
+
     <script src="./javascript/fetch.js"></script>
     <script src="./javascript/index.js"></script>
   </body>
