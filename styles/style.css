@@ -169,12 +169,12 @@ label[for="type"] {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  transform: translateY(48rem);
+  transform: translateY(60rem);
 }
 
 .container__section-two .quote {
   width: 80%;
-  min-height: 25vh;
+  min-height: 30vh;
   padding: 10px;
   background-color: var(--secondary-color);
   position: relative;
@@ -265,7 +265,7 @@ label[for="type"] {
     padding: 2rem 10px;
     background-color: var(--secondary-color);
     position: relative;
-    transform: translateY(8rem);
+    transform: translateY(10rem);
   }
   .container__section-two .quote::before {
     content: "";
