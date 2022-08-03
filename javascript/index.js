@@ -7,7 +7,7 @@ const handleDOM = (data, quoteKey, authorKey, quotesSection) => {
   // ? Getting the section of all quotes.
   const allQuotesSection = document.querySelector(quotesSection);
   // ? While the section has child elements, remove them before adding.
-  while (allQuotesSection.firstChild) {
+  while (allQuotesSection.firstElementChild) {
     allQuotesSection.firstChild.remove();
   }
   // ? Looping over the array of objects and create the quotes sections.
@@ -31,28 +31,31 @@ function animeFetchAll() {
   const url = "https://animechan.vercel.app/api/quotes";
 
   fetch(url, function (data) {
-    console.log(data);
-    handleDOM(data, "quote", "character", ".container__section-two");
+    handleDOM(
+      truncate(data, 10),
+      "quote",
+      "character",
+      ".container__section-two"
+    );
   });
 }
-
-// ? Calling the function as long as the anime value is the default.
-animeFetchAll();
 
 // ? Creating the function which is responsible for fetching the go quotes API with random endpoint.
 function byTagFetchAll() {
   const url = "https://goquotes-api.herokuapp.com/api/v1/random?count=10";
 
   fetch(url, function (data) {
-    console.log(data.quotes);
     handleDOM(
-      data.quotes.slice(0, 10),
+      truncate(data.quotes, 10),
       "text",
       "author",
       ".container__section-two"
     );
   });
 }
+
+// ? Calling the function as long as the tag value is the default.
+byTagFetchAll();
 
 // ? Adding event listener to listen to select element value change and call the functions depending on the value.
 dropDownMenu.addEventListener("change", function () {
@@ -69,16 +72,24 @@ searchBtn.addEventListener("click", () => {
       fetch(
         `https://goquotes-api.herokuapp.com/api/v1/all?type=tag&val=${searchInput.value}`,
         (data) => {
-          console.log(data);
-          handleDOM(data.quotes, "text", "author", ".container__section-two");
+          handleDOM(
+            truncate(data.quotes, 10),
+            "text",
+            "author",
+            ".container__section-two"
+          );
         }
       );
   } else {
     fetch(
       `https://animechan.vercel.app/api/quotes/character?name=${searchInput.value}`,
       (data) => {
-        console.log(data);
-        handleDOM(data, "quote", "character", ".container__section-two");
+        handleDOM(
+          truncate(data),
+          "quote",
+          "character",
+          ".container__section-two"
+        );
       }
     );
   }
