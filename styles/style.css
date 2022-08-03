@@ -45,3 +45,158 @@ h6 {
   isolation: isolate;
 }
 /* End preset */
+
+:root {
+  --main-color: rgb(255, 255, 255);
+  --secondary-color: rgb(145, 103, 251);
+  --third-color: rgb(0, 0, 0);
+  --forth-color: rgb(1, 173, 158);
+}
+
+/* font-family: 'Barlow', sans-serif; */
+/* font-family: 'Shadows Into Light', cursive; */
+
+/* Starting the styles for the mobile screens. */
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--main-color);
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  color: var(--main-color);
+}
+
+.container__section-one {
+  width: 100%;
+  height: 55%;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  background-color: var(--secondary-color);
+  border-bottom-left-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.container__section-one__desc {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.container__section-one__desc__title {
+  font-size: 2rem;
+  font-family: "Barlow", sans-serif;
+  text-align: center;
+}
+
+.container__section__desc__text {
+  font-size: 0.9rem;
+  font-family: "Barlow", sans-serif;
+  text-align: center;
+}
+
+.container__section-one__search {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+label,
+input,
+select {
+  font-family: "Barlow", sans-serif;
+}
+
+label[for="type"] {
+  font-weight: bold;
+  font-size: 1.15rem;
+  display: inline;
+  text-align: center;
+}
+
+#type {
+  width: 80%;
+  height: 2rem;
+  padding: 5px 12px;
+  font-weight: bold;
+  background-color: var(--forth-color);
+  color: var(--main-color);
+  border: 2px solid var(--secondary-color);
+}
+
+#search {
+  width: 80%;
+  height: 2.5rem;
+  /* border-radius: 1rem; */
+  padding: 8px 12px;
+  border: 2px solid var(--secondary-color);
+  background-color: var(--forth-color);
+  color: var(--main-color);
+}
+
+::placeholder {
+  color: var(--main-color);
+  font-weight: bold;
+}
+
+#search-btn {
+  width: 30%;
+  height: 2rem;
+  border: 1px solid var(--secondary-color);
+  background-color: var(--main-color);
+  color: var(--third-color);
+  font-size: smaller;
+  font-weight: bold;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.container__section-two {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  transform: translateY(55rem);
+}
+
+.container__section-two .quote {
+  width: 80%;
+  height: 35vh;
+  padding: 10px;
+  background-color: var(--secondary-color);
+  position: relative;
+}
+
+.container__section-two .quote::before {
+  content: "";
+  position: absolute;
+  left: -47px;
+  top: -0.5px;
+  border: 1.5rem solid transparent;
+  border-right-color: var(--secondary-color);
+}
+
+.quote__text {
+  font-size: 1.2rem;
+  font-family: "Barlow", sans-serif;
+  margin-bottom: 0.3rem;
+}
+
+.quote__author {
+  font-family: "Shadows Into Light", cursive;
+}
+
+/* Ending the styles for the mobile screens. */
