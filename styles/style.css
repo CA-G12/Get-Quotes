@@ -169,12 +169,12 @@ label[for="type"] {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  transform: translateY(55rem);
+  transform: translateY(48rem);
 }
 
 .container__section-two .quote {
   width: 80%;
-  height: 35vh;
+  min-height: 25vh;
   padding: 10px;
   background-color: var(--secondary-color);
   position: relative;
@@ -236,45 +236,43 @@ label[for="type"] {
     width: 100%;
     height: 3rem;
   }
-  
-#search-btn {
-  width: 50%;
-  height: 3rem;
-  border: 1px solid var(--secondary-color);
-  background-color: var(--main-color);
-  color: var(--third-color);
-  font-size:larger ;
-  font-weight: bold;
-  font-family: "Barlow", sans-serif;
 
-  border-radius: 1rem;
-  cursor: pointer;
-}
-.container__section-two {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  transform: translateY(32rem);
-}
-.container__section-two .quote {
-  width: 80%;
-  height: 35vh;
-  padding: 10px;
-  background-color: var(--secondary-color);
-  position: relative;
-}
-.container__section-two .quote::before {
-  content: "";
-  position: absolute;
-  left: -47px;
-  top: -0.5px;
-  border: 1.5rem solid transparent;
-  border-right-color:var(--secondary-color) ;
-}
+  #search-btn {
+    width: 50%;
+    height: 3rem;
+    border: 1px solid var(--secondary-color);
+    background-color: var(--main-color);
+    color: var(--third-color);
+    font-size: larger;
+    font-weight: bold;
+    font-family: "Barlow", sans-serif;
 
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+  .container__section-two {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .container__section-two .quote {
+    width: 80%;
+    min-height: 35vh !important;
+    padding: 2rem 10px;
+    background-color: var(--secondary-color);
+    position: relative;
+    transform: translateY(8rem);
+  }
+  .container__section-two .quote::before {
+    content: "";
+    position: absolute;
+    left: -47px;
+    top: -0.5px;
+    border: 1.5rem solid transparent;
+    border-right-color: var(--secondary-color);
+  }
 }
-
