@@ -69,11 +69,17 @@ searchBtn.addEventListener("click", () => {
       fetch(
         `https://goquotes-api.herokuapp.com/api/v1/all?type=tag&val=${searchInput.value}`,
         (data) => {
-        console.log(data)
+          console.log(data);
           handleDOM(data.quotes, "text", "author", ".container__section-two");
         }
       );
   } else {
-    //fetch anime api
+    fetch(
+      `https://animechan.vercel.app/api/quotes/character?name=${searchInput.value}`,
+      (data) => {
+        console.log(data);
+        handleDOM(data, "quote", "character", ".container__section-two");
+      }
+    );
   }
 });
