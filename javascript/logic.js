@@ -3,4 +3,6 @@ const truncate = (array, length) => {
   return array.slice(0, length);
 };
 
-module.exports = truncate;
+if (typeof module !== "undefined") {
+  module.exports = truncate;
+}
